@@ -9,6 +9,8 @@ sitemaps = {
     "topic":Topic_Sitemap()
 }
 
+print(sitemaps)
+
 urlpatterns = [
     path('', main_page, name='blog_list'),
     path('blog/<slug>',blog_post ,name="blog_post"),
@@ -16,3 +18,5 @@ urlpatterns = [
     path(r'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
+
+# handler404 = 'blog.views.handler404'
